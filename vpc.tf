@@ -3,10 +3,6 @@
 # Copyright 2020 IBM
 #####################################################
 
-provider "ibm" {
-  region = var.region
-}
-
 data "ibm_is_vpc" "vpc_ds" {
   count = var.create_vpc ? 0 : 1
   name  = var.vpc_name
